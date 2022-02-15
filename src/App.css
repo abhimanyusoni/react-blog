@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+*{
+  -webkit-transition: 0.2s all ease-in-out;
+          transition: 0.2s all ease-in-out
 }
-
-.App-logo {
-  height: 40vmin;
+body{
+  font-family: 'Poppins';
+  font-size: 14px;
+  line-height: 1.7;
+  background: #fff2e1;
+}
+.site-header h2{
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+.onecat button{
+  background: #ff9419;
+  border: 2px solid #ff9419;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.onecat button:hover{
+  background: transparent;
+  color: #ff9419;
+}
+.list-out-blogs .slick-list{
+  margin: 0 -10px;
+  padding: 30px 0;
+}
+.list-out-blogs .slick-list .slick-slide{
+  padding: 0 10px;
+}
+.oneblog{
+  background: #fff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.06);
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  min-height: 250px;
+}
+.bloglist-title{
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+.bloglist-title::after,
+.explore_more_cats .explore-ttl::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  min-width: 50px;
+  width: 40%;
+  height: 4px;
+  background: #ff9419;
+}
+.oneblog > a{
+  color: #ff9419;
+}
+.oneblog .title{
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff9419;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.oneblog .desc{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.oneblog .date{
+  color: #ff941973;
+  font-size: 12px;
+}
+.read-more{
+  color: #ff9419;
+  font-size: 15px;
+}
+.read-more:hover{
+  text-decoration: underline;
+  color: #ff9419;
+}
+.oneblog > div{
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 10px;
+}
+.list-out-blogs .slick-arrow{
+  top: -40px;
+  width: 50px;
+  height: 50px;
+}
+.list-out-blogs .slick-arrow::before{
+  font-size: 50px;
+  color: #ff9419;
+}
+.list-out-blogs .slick-arrow.slick-prev{
+  right: 60px;
+  left: auto;
+}
+.list-out-blogs .slick-arrow.slick-next{
+  right: 0px;
+  left: auto;
+}
+.go-back{
+  font-size: 18px;
+  font-weight: 700;
+  color: #ff9419 !important;
+}
+.single-detail{
+  background: #fff;
+  padding: 15px 20px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+.single-detail h2{
+  font-size: 24px;
+  color: #ff9419;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.single-detail span{
+  font-size: 14px;
+  color: #ff9419;
+  opacity: 0.5;
+}
+.main-outer-mapped{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  margin: -20px;
+}
+.grouped-one{
+  position: relative;
+  min-width: 100%;
+  padding: 20px;
+}
+.grouped-one > div{
+  float: left;
+  width: calc(50% - 10px);
+  margin-left: 20px;
+}
+.grouped-one > div:nth-child(2){
+  margin-bottom: 25px; 
+}
+.grouped-one > div:first-child{
+  min-height: 525px;
+  margin-left: 0;
+}
+button.prev,
+button.next{
+  padding: 8px 20px;
+  background: #ff9419;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid #ff9419;
+  outline: none;
+  box-shadow: none !important;
+}
+button.prev:hover,
+button.next:hover{
+  color: #ff9419;
+  background: transparent;
+}
+.prev.disabled{
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.explore_more_cats > .explore-ttl{
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 5px;
+  display: inline-block;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.explore-one-title{
+  font-size: 20px;
+  font-weight: 300;
 }
-
-.App-link {
-  color: #61dafb;
+.explored-one_cat{
+  width: calc(33% - 10px);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.explored-one_cat .oneblog{
+  min-height: 300px;
+  margin-bottom: 20px;
 }
