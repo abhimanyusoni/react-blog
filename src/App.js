@@ -60,9 +60,9 @@ function App() {
       <Header />
       <BrowserRouter>
         <Switch>
-          <Route exact path={'https://abhimanyusoni.github.io/react-blog/'} render={() => (<AllCategories allcats={uniqueArr} getCatHandler={getCatHandler} />)} />
-          <Route exact path={`https://abhimanyusoni.github.io/react-blog/${category}`} render={() => (<BlogList data={data} related={randoms} passedCat={category} />)} />
-          <Route exact path={`https://abhimanyusoni.github.io/react-blog/${category}/:id`} render={() => (<Single allcats={uniqueArr} location={window.location.pathname} passedCat={category} />)} />
+          <Route exact path={'/'} render={() => (<AllCategories allcats={uniqueArr} getCatHandler={getCatHandler} />)} />
+          <Route exact path={`/${category}`} render={() => (<BlogList data={data} related={randoms} passedCat={category} />)} />
+          <Route exact path={`/${category}/:id`} render={() => (<Single allcats={uniqueArr} location={window.location.pathname} passedCat={category} />)} />
         </Switch>
       </BrowserRouter>
     </div>
